@@ -3,6 +3,7 @@
     <fullName>Mailing_Address__c</fullName>
     <externalId>false</externalId>
     <formula>Inhabitant__r.Address__r.Mailing_Address__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Mailing Address</label>
     <required>false</required>
     <trackTrending>false</trackTrending>
