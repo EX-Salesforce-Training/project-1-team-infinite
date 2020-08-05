@@ -84,15 +84,25 @@ public class DataFactory {
             Route__C route = new Route__C();
             String value = 'Route ' + i;
             route.name = value;
+<<<<<<< HEAD
 
             RouteNames.add(route);
 
+=======
+                  
+            RouteNames.add(route);
+            
+>>>>>>> baacaba523b98d696e87b882950a52a476338e22
         }
         insert RouteNames;
         return RouteNames;
     }
 
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> baacaba523b98d696e87b882950a52a476338e22
     public static List<Mail__c> makeMail(integer n){
         List<Mail__c> newMail = new List<Mail__c>();
         List<Contact> newContacts = new List<Contact>();
@@ -102,7 +112,11 @@ public class DataFactory {
         List<Inhabitant__c> newInhabs = new List<Inhabitant__c>();
         newInhabs = makeInhabitants(n, newContacts, newAddresses);
         DataFactory.CreateRoute(5);
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> baacaba523b98d696e87b882950a52a476338e22
         for (integer j = 0; j < n; j++){
             Mail__c m = new Mail__c();
             m.Inhabitant__c = newInhabs[j].id;
