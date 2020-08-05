@@ -10,7 +10,9 @@
         <name>Settings</name>
     </types> -->
     <types>
-        <members>*</members>
+        <members>Address__c</members>
+        <members>Route__c</members>
+        <members>Inhabitant__c</members>
         <name>CustomObject</name>
     </types>
     <types>
