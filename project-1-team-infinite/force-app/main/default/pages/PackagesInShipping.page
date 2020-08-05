@@ -1,7 +1,7 @@
 <apex:page controller="PackagesInShippingController">
     <apex:form >
-    	<apex:pageBlock >
-        	<apex:pageBlockTable value="{!mailList}" var="mail">
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!mailList}" var="mail">
                 <apex:column value="{!mail.name}"/>
                 <apex:column value="{!mail.inhabitant__r.Contact__c}"/>
                 <apex:column value="{!mail.Delivery_Status__c}"/>               

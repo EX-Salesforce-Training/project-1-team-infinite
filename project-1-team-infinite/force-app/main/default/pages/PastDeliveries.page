@@ -1,11 +1,11 @@
 <apex:page Controller="PastDeliveriesController" >
     <apex:form >
-    	<apex:pageBlock >
-        	<apex:pageBlockTable value="{!mailList}" var="mail">
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!mailList}" var="mail">
                 <apex:column value="{!mail.name}"/>
                 <apex:column value="{!mail.inhabitant__r.Contact__c}"/>
                 <apex:column >
-                    	<apex:outputField value="{!mail.Delivery_Status__c}"/>
+                        <apex:outputField value="{!mail.Delivery_Status__c}"/>
                 </apex:column>               
             </apex:pageBlockTable>
         </apex:pageBlock>

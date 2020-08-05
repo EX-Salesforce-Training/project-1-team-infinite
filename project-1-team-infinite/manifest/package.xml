@@ -32,16 +32,19 @@
     </types>
     <types>
         <members>DataFactory</members>
+        <members>PackagesInShippingController</members>
+        <members>PastDeliveriesController</members>
         <name>ApexClass</name>
     </types>
     <!-- <types>
         <members>*</members>
         <name>ApexComponent</name>
     </types> -->
-    <!-- <types>
-        <members>*</members>
+    <types>
+        <members>PackagesInShipping</members>
+        <members>PastDeliveries</members>
         <name>ApexPage</name>
-    </types> -->
+    </types>
     <types>
         <members>*</members>
         <name>ApexTestSuite</name>
