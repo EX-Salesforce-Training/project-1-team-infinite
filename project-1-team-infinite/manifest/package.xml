@@ -22,6 +22,10 @@
         <name>CustomApplication</name>
     </types>
     <types>
+        <members>Postal_Service_UtilityBar</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
         <members>Mail__c-Driver</members>
         <members>Mail__c-MailHandler</members>
         <name>Layout</name>
