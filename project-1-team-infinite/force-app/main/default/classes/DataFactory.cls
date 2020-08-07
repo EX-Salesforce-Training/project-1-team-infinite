@@ -60,6 +60,7 @@ public class DataFactory {
         	a.State__c = StateList.get(randomState);
         	integer randomZipcode = integer.valueOf((Math.random() * 2));
         	a.Zip_Code__c = ZipcodeList.get(randomZipcode);
+            a.name = 'Test Address ' + String.valueOf(i);
             newadds.add(a);
         }
         insert newadds;
@@ -91,6 +92,16 @@ public class DataFactory {
         insert RouteNames;
         return RouteNames;
     }
+    
+    public static List<SelectOption> getDeliveryStatuses(){
+		List<SelectOption> options = new List<SelectOption>();
+        Schema.DescribeFieldResult fieldResult = Mail__c.Delivery_Status__c.getDescribe();
+		List<Schema.PicklistEntry> ple = fieldResult.getPicklistValues();
+        for( Schema.PicklistEntry f : ple){
+			options.add(new SelectOption(f.getLabel(), f.getValue()));
+        }
+		return options;
+	}
 
 
     public static List<Mail__c> makeMail(integer n){
@@ -101,11 +112,23 @@ public class DataFactory {
         newAddresses = makeAddresses(n);
         List<Inhabitant__c> newInhabs = new List<Inhabitant__c>();
         newInhabs = makeInhabitants(n, newContacts, newAddresses);
-        DataFactory.CreateRoute(5);
+        List<Route__c> newRoutes = new List<Route__c>();
+        newRoutes = CreateRoute(5);
+        List<SelectOption> DeliveryStatuses = new List<SelectOption>();
+        DeliveryStatuses = getDeliveryStatuses();
 
         for (integer j = 0; j < n; j++){
             Mail__c m = new Mail__c();
             m.Inhabitant__c = newInhabs[j].id;
+            if (math.mod(j, 2)==0){
+                m.Fragile__c = true;
+            }
+            m.Height__c = integer.valueOf((Math.random() * 3)+2);
+            m.Width__c = integer.valueOf((Math.random() * 3)+4);
+            m.Weight__c = integer.valueOf((Math.random() * 3)+2);
+            m.Route__c = newRoutes[integer.valueOf((Math.random() * 4))].id;
+            Integer delstat = integer.valueOf(Math.random() * 3);
+            m.Delivery_Status__c = DeliveryStatuses[delstat].getValue();
             newMail.add(m);
         }
         insert newMail;

@@ -12,7 +12,7 @@
             <sorted>false</sorted>
             <value>
                 <fullName>Inventoried</fullName>
-                <default>false</default>
+                <default>true</default>
                 <label>Inventoried</label>
             </value>
             <value>
@@ -21,7 +21,7 @@
                 <label>Missing</label>
             </value>
             <value>
-                <fullName>Out_for_Delivery</fullName>
+                <fullName>Out for Delivery</fullName>
                 <default>false</default>
                 <label>Out for Delivery</label>
             </value>
