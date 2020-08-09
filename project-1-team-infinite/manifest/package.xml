@@ -35,6 +35,7 @@
         <members>PackagesInShippingController</members>
         <members>PastDeliveriesController</members>
         <members>TrackingCodeSearchController</members>
+        <members>ContactEditController</members>
         <name>ApexClass</name>
     </types>
     <!-- <types>
@@ -45,6 +46,9 @@
         <members>PackagesInShipping</members>
         <members>PastDeliveries</members>
         <members>TrackingCodeSearch</members>
+        <members>ContactView</members>
+        <members>ContactViewPost</members>
+        <members>ContactEdit</members>
         <name>ApexPage</name>
     </types>
     <types>
