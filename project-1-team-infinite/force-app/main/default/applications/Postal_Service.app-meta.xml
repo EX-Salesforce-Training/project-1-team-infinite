@@ -15,6 +15,9 @@
     <tabs>Route__c</tabs>
     <tabs>standard-Contact</tabs>
     <tabs>Inhabitant__c</tabs>
+    <tabs>Packages_in_Shipping</tabs>
+    <tabs>Past_Deliveries</tabs>
+    <tabs>Tracking_Code_Search</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Postal_Service_UtilityBar</utilityBar>
 </CustomApplication>
