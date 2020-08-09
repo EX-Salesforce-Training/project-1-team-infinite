@@ -189,6 +189,10 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>Edit_Your_Information</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>Inhabitant__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>

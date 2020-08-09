@@ -49,11 +49,11 @@ public class DataFactory {
         for (integer i = 0; i < n; i++){
         	Address__c a = new Address__c();
         	integer randomStreetNumber = integer.valueOf((Math.random() * 3));
-        	//a.Street_Number__c = StreetNumberList.get(randomStreetNumber);
+        	a.Street_Number__c = StreetNumberList.get(randomStreetNumber);
         	integer randomStreetName = integer.valueOf((Math.random() * 29));
         	a.Street_Name__c = StreetNameList.get(randomStreetName);
         	integer randomUnitNumber = integer.valueOf((Math.random() * 29));
-        	//a.Unit_Number__c = UnitNumberList.get(randomUnitNumber);
+        	a.Unit_Number__c = UnitNumberList.get(randomUnitNumber);
         	integer randomCity = integer.valueOf((Math.random() * 29));
         	a.City__c = CityList.get(randomCity);
         	integer randomState = integer.valueOf((Math.random() * 29));
@@ -101,11 +101,19 @@ public class DataFactory {
         newAddresses = makeAddresses(n);
         List<Inhabitant__c> newInhabs = new List<Inhabitant__c>();
         newInhabs = makeInhabitants(n, newContacts, newAddresses);
-        DataFactory.CreateRoute(5);
+        List<Route__c> newRoutes = new List<Route__c>();
+        newRoutes = CreateRoute(10);
 
         for (integer j = 0; j < n; j++){
             Mail__c m = new Mail__c();
             m.Inhabitant__c = newInhabs[j].id;
+            m.Height__c = integer.valueOf((Math.random() * 2)+2);
+            m.Width__c = integer.valueOf((Math.random() * 2)+5);
+            m.Weight__c = integer.valueOf((Math.random() * 3)+1);
+            if (Math.random() > 0.5){
+                m.Fragile__c = true;
+            }
+            m.Route__c = newRoutes[integer.valueOf((Math.random() * 4))].id;
             newMail.add(m);
         }
         insert newMail;
