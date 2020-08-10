@@ -2,9 +2,18 @@
     <apex:form >
         <apex:pageBlock >
             <apex:pageBlockTable value="{!mailList}" var="mail">
-                <apex:column value="{!mail.name}"/>
-                <apex:column value="{!mail.inhabitant__r.Contact__c}"/>
-                <apex:column value="{!mail.Delivery_Status__c}"/>               
+                <apex:column >
+                    <apex:facet name="header">Tracking Number</apex:facet>
+                    <apex:outputField value="{!mail.name}"/>
+                </apex:column>
+                <apex:column >
+                    	<apex:facet name="header">Delivery Status</apex:facet>
+                        <apex:outputField value="{!mail.Delivery_Status__c}"/>
+                </apex:column>  
+                <apex:column >
+                    <apex:facet name="header">Estimate Delivery Date/Time</apex:facet>
+                        <apex:outputField value="{!mail.Estimate_Delivery__c}"/>
+                </apex:column>  
             </apex:pageBlockTable>
         </apex:pageBlock>
     </apex:form>

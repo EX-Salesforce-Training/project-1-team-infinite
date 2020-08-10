@@ -1,0 +1,16 @@
+<apex:page controller="ContactEditController">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!page2_save}" value="Save" />
+                <apex:commandButton action="{!page2_cancel}" value="Cancel" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+                <apex:inputfield value="{!c.firstname}" /> <br/>
+                <apex:inputfield value="{!c.lastname}"/> <br/>
+                <apex:inputfield value="{!c.email}" /> <br/>
+                <apex:inputfield value="{!c.phone}" /> 
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
