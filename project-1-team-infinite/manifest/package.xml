@@ -2,12 +2,17 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 
     <types>
-        <members>*</members>
+        <members>MailDashboards/kuSYhzyBoWDSLOPxDYNXnYsWlHhaxK</members>
         <name>Dashboard</name>
     </types>
     <types>
-        <members>*</members>
-        <name>Report</name></types>
+        <members>PostalService/Outgoing_Mail_zWB</members>
+        <members>PostalService/Missing_Mail_peh</members>
+        <members>PostalService/Delivered_Mail_YGG</members>
+        <members>PostalService/States_with_most_mail_EVN</members>
+        <members>PostalService/Mail_over_the_WHW_limits_55z</members>
+        <name>Report</name>
+    </types>
     <types>
         <members>MailHandler</members>
         <members>Driver</members>
