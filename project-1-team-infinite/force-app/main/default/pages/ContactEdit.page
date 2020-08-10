@@ -1,15 +1,19 @@
 <apex:page controller="ContactEditController">
+    <!--This page will generate the layout for the contact edit page-->
     <apex:form >
         <apex:pageBlock >
             <apex:pageBlockButtons >
                 <apex:commandButton action="{!page2_save}" value="Save" />
                 <apex:commandButton action="{!page2_cancel}" value="Cancel" />
+                <!--These buttons will call the pages to show the differences after saving-->
+                <!--and if the user decides to cancel the changes made.-->
             </apex:pageBlockButtons>
             <apex:pageBlockSection >
                 <apex:inputfield value="{!c.firstname}" /> <br/>
                 <apex:inputfield value="{!c.lastname}"/> <br/>
                 <apex:inputfield value="{!c.email}" /> <br/>
                 <apex:inputfield value="{!c.phone}" /> 
+                <!--These are the inpute fields for the various aspects of a contact that will be edited.-->
             </apex:pageBlockSection>
         </apex:pageBlock>
     </apex:form>

@@ -1,14 +1,19 @@
 <apex:page controller="ContactEditController">
+    <!--first page that the user sees when they want to edit their contact-->
     <apex:form >
         <apex:pageBlock >
             <apex:pageBlockButtons >
                 <apex:commandButton action="{!page1_edit}" value="Edit" />
+                <!--These buttons will call the pages to show the differences after saving-->
+                <!--and if the user decides to cancel the changes made.-->
             </apex:pageBlockButtons>
             <apex:pageBlockSection >
                 <apex:outputtext value="{!c.firstname}" /> <br/>
                 <apex:outputtext value="{!c.lastname}" /> <br/>
                 <apex:outputtext value="{!c.email}" /> <br/>
                 <apex:outputtext value="{!c.phone}" /> 
+                <!--These are the inpute fields for the various aspects of a contact that will be edited.-->
+
             </apex:pageBlockSection>
         </apex:pageBlock>
     </apex:form>

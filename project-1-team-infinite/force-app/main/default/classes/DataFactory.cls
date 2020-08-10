@@ -15,7 +15,8 @@ public class DataFactory {
         										  '(508) 603-6030','(536) 397-1758','(563) 975-9475','(706) 633-4498','(711) 213-3741',
 												  '(299) 749-7319','(396) 392-9020','(308) 260-5141','(984) 588-8944','(939) 820-2880',
         										  '(877) 355-9125','(581) 439-4193','(936) 753-6432','(663) 794-8677','(771) 796-7533'};
-                                                      
+        // For the contact object we frist start with creating lists for the pool 
+        // of names and phone numbers we will pull from.                                                      
         List<Contact> newcons = new List<Contact>();
         for (integer i = 0; i < n; i++){
         	Contact c = new Contact();
@@ -29,6 +30,9 @@ public class DataFactory {
         }
         insert newcons;
         return newcons;
+        // then grabbing a random name and phone number and assigning it 
+        //to the contact then adding it to the list.
+        //   
     }
     
     public static List<Address__c> makeAddresses(integer n){
@@ -64,6 +68,9 @@ public class DataFactory {
         }
         insert newadds;
         return newadds;
+        // then grabbing a random name and phone number and assigning it 
+        //to the contact then adding it to the list.
+        // 
     }
     
     public static List<Inhabitant__c> makeInhabitants(integer n, List<Contact> c, List<Address__c> a){
@@ -76,6 +83,8 @@ public class DataFactory {
         }
         insert newinhabs;
         return newinhabs;
+        // creating an inhabitant object then assigning a contact and address 
+        // to the inhabitant
     }
     
     public static List<Route__c> CreateRoute(integer numOfRoutes){
@@ -90,6 +99,8 @@ public class DataFactory {
         }
         insert RouteNames;
         return RouteNames;
+        // the method creates a route and inserts them into
+        // the database, the returns them
     }
 
 
@@ -118,5 +129,7 @@ public class DataFactory {
         }
         insert newMail;
         return newMail;
+        // this method will add a new inhabitant(with a new address and contact)
+        // to the mail object and fill in the other fields for the mail item
     }
 }

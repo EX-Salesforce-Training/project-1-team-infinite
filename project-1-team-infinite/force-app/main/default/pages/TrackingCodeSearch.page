@@ -1,7 +1,10 @@
 <apex:page controller="TrackingCodeSearchController" >
+    <!--this page displays the tab for tracking packages in the community -->
     <apex:form >
     	<apex:pageBlock id="theSearchResults">
         	<apex:pageBlockButtons location="bottom">
+                <!--creating the various columns for the page-->
+                    <!--and attaching the variable in the controller to the columin in the page-->
             	<apex:commandButton value="Search Mail" reRender="theSearchResults" action="{!searchMail}"/>
             </apex:pageBlockButtons>
             <apex:outputLabel value="Tracking Number"/> <br/>

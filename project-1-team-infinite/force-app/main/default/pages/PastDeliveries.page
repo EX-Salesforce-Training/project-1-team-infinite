@@ -1,8 +1,11 @@
 <apex:page Controller="PastDeliveriesController" >
     <apex:form >
+        <!--this page displays the past deliveries for a user.-->
         <apex:pageBlock >
             <apex:pageBlockTable value="{!mailList}" var="mail">
                 <apex:column >
+                    <!--creating the various columns for the page-->
+                    <!--and attaching the variable in the controller to the columin in the page-->
                     <apex:facet name="header">Tracking Number</apex:facet>
                     <apex:outputField value="{!mail.name}"/>
                 </apex:column>
