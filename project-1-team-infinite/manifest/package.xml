@@ -2,10 +2,12 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 
     <types>
+        <members>MailDashboards</members>
         <members>MailDashboards/kuSYhzyBoWDSLOPxDYNXnYsWlHhaxK</members>
         <name>Dashboard</name>
     </types>
     <types>
+        <members>PostalService</members>
         <members>PostalService/Outgoing_Mail_zWB</members>
         <members>PostalService/Missing_Mail_peh</members>
         <members>PostalService/Delivered_Mail_YGG</members>
